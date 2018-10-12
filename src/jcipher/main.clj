@@ -27,7 +27,7 @@
 
 (defn usage
   [banner exit-value]
-  (binding [*out* (if (pos? exit-value) *out* *err*)]
+  (binding [*out* (if (pos? exit-value) *err* *out*)]
     (println "Usage: jcipher [-e] -k KEY PAYLOAD")
     (println "")
     (println banner))
